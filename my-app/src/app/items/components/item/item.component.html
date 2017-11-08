@@ -1,0 +1,14 @@
+
+      <div class="card">
+        <div class="card-header">
+          <span [appState]="item.state"></span>
+          <button type="button" class="btn btn-sm btn-danger float-right" (click)="deleteItem(item)">X</button>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{ item.name }}</h4>
+          <p class="card-text">{{ item.reference }}</p>
+          <button *ngIf="state.ALIVRER === item.state" class="btn btn-primary" (click)="changeState(item,state.ENCOURS)">En cours</button>
+          <button *ngIf="state.ENCOURS === item.state" class="btn btn-primary" (click)="changeState(item,state.LIVREE)">Livrée</button>
+        </div>
+      </div>
+

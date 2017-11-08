@@ -1,0 +1,7 @@
+<div class="container">
+  <ng-container  *ngFor="let item of collection | async">
+    <app-item [item]="item"></app-item>
+  </ng-container>
+</div>
+
+
